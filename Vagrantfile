@@ -29,11 +29,11 @@ Vagrant.configure("2") do |config|
 
   ### Ici, nous faisons en sorte que localhost:8080 sur la machine hote renvoie vers le port 8080 de notre vm
 
-  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  config.vm.network "forwarded_port", guest: 6060, host: 1234
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on

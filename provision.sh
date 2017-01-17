@@ -54,7 +54,20 @@ then
 
 	# Move Jenkins to port 6060
 	sed -i 's/8080/6060/g' /etc/default/jenkins
+	
+	# Changer la config de Jenkins par des fichiers qu'on maitrise avec couple mdp/user à remplir ici
+
+	# Changer cette ligne et la mettre en plusieurs pour prendre que ce qu'on veut (users + plugin + ...)
+	# cp -R /vagrant_data/* /var/lib/jenkins/
+
+
+	# Jenkins Restart
+
 	/etc/init.d/jenkins restart
 else
 	echo "CHECK - Jenkins already installed"
 fi
+
+
+
+
